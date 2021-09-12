@@ -8,13 +8,10 @@ const NUMBER_OF_SCORES = "1000"
 
 var socket = new net.Socket();
 
-socket.connect(port, host, sendData());
-
-function sendData(){ socket.write(USER
+socket.connect(port, host, ()=>{
 	socket.write(USER_ID + " " + NUMBER_OF_SCORES)
-}
+});
 
 socket.on('data', (data) => {
     console.log(`${data}`);
-    socket.destroy();
 });
