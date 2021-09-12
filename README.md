@@ -8,6 +8,7 @@ While in scraperpyDocker
 ## Pythonscraper
 
 docker build -t scraperserver .
+
 docker run --network host -e ServerPort=6890 scraperserver 
 
 ## Test Client 
