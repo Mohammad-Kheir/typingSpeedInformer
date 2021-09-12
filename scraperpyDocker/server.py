@@ -1,9 +1,11 @@
+import sys
+import os
 import socket as s
 from time import sleep
 from typeracerScraper_package import typeracerScraper as t
 
 HOST = "localhost"
-PORT = 65004
+PORT = int(os.environ['ServerPort'])
 EOF = "x23Stop"
 
 
